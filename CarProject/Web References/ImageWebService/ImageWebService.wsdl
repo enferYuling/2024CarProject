@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://PaperPark.WebService/WebInterface" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://PaperPark.WebService/WebInterface" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://PaperPark.WebService/WebInterface">
+      <s:element name="ImageInterfaceService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImageInterfaceServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImageInterfaceServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestImage">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestImageResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ImageInterfaceServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:ImageInterfaceService" />
+  </wsdl:message>
+  <wsdl:message name="ImageInterfaceServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:ImageInterfaceServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestImageSoapIn">
+    <wsdl:part name="parameters" element="tns:TestImage" />
+  </wsdl:message>
+  <wsdl:message name="TestImageSoapOut">
+    <wsdl:part name="parameters" element="tns:TestImageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ImageWebServiceSoap">
+    <wsdl:operation name="ImageInterfaceService">
+      <wsdl:input message="tns:ImageInterfaceServiceSoapIn" />
+      <wsdl:output message="tns:ImageInterfaceServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestImage">
+      <wsdl:input message="tns:TestImageSoapIn" />
+      <wsdl:output message="tns:TestImageSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ImageWebServiceSoap" type="tns:ImageWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ImageInterfaceService">
+      <soap:operation soapAction="http://PaperPark.WebService/WebInterface/ImageInterfaceService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestImage">
+      <soap:operation soapAction="http://PaperPark.WebService/WebInterface/TestImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ImageWebServiceSoap12" type="tns:ImageWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ImageInterfaceService">
+      <soap12:operation soapAction="http://PaperPark.WebService/WebInterface/ImageInterfaceService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestImage">
+      <soap12:operation soapAction="http://PaperPark.WebService/WebInterface/TestImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImageWebService">
+    <wsdl:port name="ImageWebServiceSoap" binding="tns:ImageWebServiceSoap">
+      <soap:address location="http://10.100.1.128/cwbase/web/session/gsidp/gsys/ImageSystem/ImageWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ImageWebServiceSoap12" binding="tns:ImageWebServiceSoap12">
+      <soap12:address location="http://10.100.1.128/cwbase/web/session/gsidp/gsys/ImageSystem/ImageWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

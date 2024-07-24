@@ -1,0 +1,100 @@
+﻿<Window x:Class="JIDIANQI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JIDIANQI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="232"/>
+            <ColumnDefinition Width="568"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BUTTON_ALL_ON" Content="全部开启" HorizontalAlignment="Left" Margin="18,235,0,0" VerticalAlignment="Top" Click="BUTTON_ALL_ON_Click" Height="19" Width="52"/>
+        <Button x:Name="BUTTON_ALL_OFF" Content="全部关闭" HorizontalAlignment="Center" Margin="0,235,0,0" VerticalAlignment="Top" Click="BUTTON_ALL_OFF_Click" Height="19" Width="52"/>
+        <Button x:Name="BUTTONGETIP" Content="获取本机IP" HorizontalAlignment="Left" Margin="24,8,0,0" VerticalAlignment="Top" Click="BUTTONGETIP_Click" Height="19" Width="63"/>
+        <TextBox x:Name="TEXTBOXSHOWIP" HorizontalAlignment="Left" Margin="107,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" Height="19"/>
+        <TextBox x:Name="TextBoxCONNECT" HorizontalAlignment="Left" Margin="21,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <Button x:Name="BUTTONCONNECT" Content="IO板" HorizontalAlignment="Left" Margin="64,63,0,0" VerticalAlignment="Top" Click="BUTTONCONNECT_Click" Height="19" Width="29"/>
+        <Button x:Name="BUTTONON2" Content="降温风机2" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" Click="BUTTONON2_Click" Height="19" Width="59"/>
+        <Button x:Name="BUTTONON1" Content="降温风机1" HorizontalAlignment="Left" Margin="14,108,0,0" VerticalAlignment="Top" Click="BUTTONON1_Click" Height="19" Width="59"/>
+        <Button x:Name="BUTTONON3" Content="吸尘风机" HorizontalAlignment="Left" Margin="18,141,0,0" VerticalAlignment="Top" Click="BUTTONON3_Click" Height="19" Width="52"/>
+        <Button x:Name="BUTTONON4" Content="清洗风机" HorizontalAlignment="Left" Margin="88,141,0,0" VerticalAlignment="Top" Click="BUTTONON4_Click" Height="19" Width="52"/>
+        <Button x:Name="BUTTONON5" Content="除尘震动电机" HorizontalAlignment="Left" Margin="3,174,0,0" VerticalAlignment="Top" Click="BUTTONON5_Click" Height="19" Width="76"/>
+        <Button x:Name="BUTTONON6" Content="运动控制卡" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Click="BUTTONON6_Click" Height="19" Width="64"/>
+        <Button x:Name="BUTTONON7" Content="水泵控制" HorizontalAlignment="Left" Margin="18,0,0,0" VerticalAlignment="Center" Click="BUTTONON7_Click" Height="19" Width="52"/>
+        <Button x:Name="BUTTONON8" Content="负压风机" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BUTTONON8_Click" Height="19" Width="52"/>
+        <TextBox x:Name="TextBoxCIO" HorizontalAlignment="Left" Margin="38,86,0,0" TextWrapping="Wrap" Text="IO板控制按键" VerticalAlignment="Top" Width="82" Height="17"/>
+        <Button x:Name="BUTTONbattery" Content="电池" HorizontalAlignment="Left" Margin="204,62,0,0" VerticalAlignment="Top" Click="BUTTONbattery_Click" Height="21" Width="28"/>
+        <TextBox x:Name="TextBoxTvoltage" HorizontalAlignment="Left" Margin="172,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxTcurrent" HorizontalAlignment="Left" Margin="172,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxSOC" HorizontalAlignment="Left" Margin="172,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxFault" HorizontalAlignment="Left" Margin="172,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxSMAXV" HorizontalAlignment="Left" Margin="172,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxSMINV" HorizontalAlignment="Left" Margin="172,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxSMAXT" HorizontalAlignment="Left" Margin="172,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxSMINT" HorizontalAlignment="Left" Margin="172,246,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <TextBox x:Name="TextBoxMAXAC" HorizontalAlignment="Left" Margin="172,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="17"/>
+        <Button x:Name="BUTTONfront" Content="前避障雷达" HorizontalAlignment="Left" Margin="69,61,0,0" VerticalAlignment="Top" Click="BUTTONfront_Click" Grid.Column="1" Height="19" Width="64"/>
+        <Button x:Name="BUTTONrear" Content="后避障雷达" HorizontalAlignment="Left" Margin="148,61,0,0" VerticalAlignment="Top" Click="BUTTONrear_Click" Grid.Column="1" Height="19" Width="64"/>
+        <TextBox x:Name="TextBoxChannel1" HorizontalAlignment="Left" Margin="81,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxChannel2" HorizontalAlignment="Left" Margin="81,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxChannel3" HorizontalAlignment="Left" Margin="81,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxChannel4" HorizontalAlignment="Left" Margin="81,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxShowT1" HorizontalAlignment="Left" Margin="227,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <Button x:Name="ButtonGetT" Content="温度" HorizontalAlignment="Left" Margin="246,63,0,0" VerticalAlignment="Top" Click="ButtonGetT_Click" Grid.Column="1" Height="19" Width="28"/>
+        <TextBox x:Name="TextBoxShowT2" HorizontalAlignment="Left" Margin="227,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxShowT3" HorizontalAlignment="Left" Margin="227,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxShowT4" HorizontalAlignment="Left" Margin="227,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox HorizontalAlignment="Left" Margin="227,180,0,0" TextWrapping="Wrap" Text="设置最高温" VerticalAlignment="Top" Width="66" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetMaxt" HorizontalAlignment="Left" Margin="298,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Grid.Column="1" Height="17"/>
+        <TextBox HorizontalAlignment="Left" Margin="227,203,0,0" TextWrapping="Wrap" Text="设置次高温" VerticalAlignment="Top" Width="66" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetNMaxt" HorizontalAlignment="Left" Margin="298,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Grid.Column="1" Height="17"/>
+        <TextBox HorizontalAlignment="Left" Margin="227,225,0,0" TextWrapping="Wrap" Text="设置次低温" VerticalAlignment="Top" Width="66" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetNMint" HorizontalAlignment="Left" Margin="298,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="___无名称_" HorizontalAlignment="Left" Margin="227,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Text="设置最低温" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetMint" HorizontalAlignment="Left" Margin="298,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxChannel5" HorizontalAlignment="Left" Margin="81,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxChannel6" HorizontalAlignment="Left" Margin="81,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxChannel7" HorizontalAlignment="Left" Margin="81,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxChannel8" HorizontalAlignment="Left" Margin="81,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,267,0,0" TextWrapping="Wrap" Text="最远距离" VerticalAlignment="Top" Width="57" Grid.Column="1" Height="17"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,289,0,0" TextWrapping="Wrap" Text="次远距离" VerticalAlignment="Top" Width="57" Grid.Column="1" Height="17"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,311,0,0" TextWrapping="Wrap" Text="次近距离" VerticalAlignment="Top" Width="57" Grid.Column="1" Height="17"/>
+        <TextBox HorizontalAlignment="Left" Margin="81,333,0,0" TextWrapping="Wrap" Text="最近距离" VerticalAlignment="Top" Width="57" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetMY" HorizontalAlignment="Left" Margin="143,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetNY" HorizontalAlignment="Left" Margin="143,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetNJ" HorizontalAlignment="Left" Margin="143,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxSetMJ" HorizontalAlignment="Left" Margin="143,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" Grid.Column="1" Height="17"/>
+        <Button x:Name="ButtonGetW" Content="压力" HorizontalAlignment="Left" Margin="426,63,0,0" VerticalAlignment="Top" Click="ButtonGetW_Click" Grid.Column="1" Height="19" Width="28"/>
+        <TextBox x:Name="TextBoxYL1" HorizontalAlignment="Left" Margin="380,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox x:Name="TextBoxYL2" HorizontalAlignment="Left" Margin="380,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="17"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,133,0,0" TextWrapping="Wrap" Text="设置最大拉1" VerticalAlignment="Top" Width="74"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,154,0,0" TextWrapping="Wrap" Text="设置最小拉1" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="TextBoxSMAXL1" Grid.Column="1" HorizontalAlignment="Left" Margin="459,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="TextBoxSMAINL1" Grid.Column="1" HorizontalAlignment="Left" Margin="459,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,176,0,0" TextWrapping="Wrap" Text="设置最大压1" VerticalAlignment="Top" Width="74"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,198,0,0" TextWrapping="Wrap" Text="设置最小压1" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="TextBoxSMAXY1" Grid.Column="1" HorizontalAlignment="Left" Margin="459,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="TextBoxSMAINY1" Grid.Column="1" HorizontalAlignment="Left" Margin="459,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,220,0,0" TextWrapping="Wrap" Text="设置最大拉2" VerticalAlignment="Top" Width="74"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,242,0,0" TextWrapping="Wrap" Text="设置最小拉2" VerticalAlignment="Top" Width="74"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,264,0,0" TextWrapping="Wrap" Text="设置最大压2" VerticalAlignment="Top" Width="74"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="380,286,0,0" TextWrapping="Wrap" Text="设置最小压2" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="TextBoxSMAXL2" Grid.Column="1" HorizontalAlignment="Left" Margin="459,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="TextBoxSMAINL2" Grid.Column="1" HorizontalAlignment="Left" Margin="459,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="TextBoxSMAXY2" Grid.Column="1" HorizontalAlignment="Left" Margin="459,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="TextBoxSMAINY2" Grid.Column="1" HorizontalAlignment="Left" Margin="459,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+        <TextBox x:Name="TextBoxchar_dischar" HorizontalAlignment="Left" Margin="172,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBoxFD" HorizontalAlignment="Left" Margin="172,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBoxSOCmax" HorizontalAlignment="Left" Margin="0,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Grid.Column="1"/>
+        <TextBox x:Name="TextBoxSOCmain" HorizontalAlignment="Left" Margin="0,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Margin="147,334,0,0" TextWrapping="Wrap" Text="设置最大SOC" VerticalAlignment="Top" Width="80"/>
+        <TextBox HorizontalAlignment="Left" Margin="147,356,0,0" TextWrapping="Wrap" Text="设置最小SOC" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="TextBoxSOCtx" HorizontalAlignment="Left" Margin="172,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonStop" Grid.Column="1" Content="停止" HorizontalAlignment="Left" Margin="476,62,0,0" VerticalAlignment="Top" Click="ButtonStop_Click"/>
+        <Button x:Name="ButtonDK" Grid.Column="1" Content="断开" HorizontalAlignment="Left" Margin="298,63,0,0" VerticalAlignment="Top" Click="ButtonDK_Click"/>
+
+    </Grid>
+</Window>
