@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using JIDIANQI;
+ 
+
 
 namespace CarProject.Method
 {
@@ -67,7 +69,7 @@ namespace CarProject.Method
         /// <returns></returns>
      public string GetDCWD(string IPAddress)
         {
-            //mainWindow.DC();
+           // JIDIANQI.MainWindow.DC();
             return "";
         }
     }

@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+ 
+
 
 namespace CarProject.Home
 {
@@ -43,12 +45,15 @@ namespace CarProject.Home
             InitializeCounters();
             homemethod = new HomeMethod(db);
            IPAddress= homemethod.GetLocalIPAddress();//获取IP地址
+
+
             if (string.IsNullOrEmpty(IPAddress))
             {
                 MessageBox.Show("获取IP地址失败");
                 this.Close();
                 return;
-            }
+            } 
+             
             realname_lab.Text = "欢迎你，" + realName;
             // 将图片旋转90度
             sxsl_pictureBox.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
