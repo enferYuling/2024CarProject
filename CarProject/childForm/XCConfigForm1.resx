@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACM
+        DgAAAk1TRnQBSQFMAgEBBAEAARgBAAEYAQABGQEAARkBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABZAMAATIDAAEBAQABCAUAAYgBExgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
+        AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
+        AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
+        AwABZgMAAZkDAAHMAgABMwMAAjMCAAEzAWYCAAEzAZkCAAEzAcwCAAEzAf8CAAFmAwABZgEzAgACZgIA
+        AWYBmQIAAWYBzAIAAWYB/wIAAZkDAAGZATMCAAGZAWYCAAKZAgABmQHMAgABmQH/AgABzAMAAcwBMwIA
+        AcwBZgIAAcwBmQIAAswCAAHMAf8CAAH/AWYCAAH/AZkCAAH/AcwBAAEzAf8CAAH/AQABMwEAATMBAAFm
+        AQABMwEAAZkBAAEzAQABzAEAATMBAAH/AQAB/wEzAgADMwEAAjMBZgEAAjMBmQEAAjMBzAEAAjMB/wEA
+        ATMBZgIAATMBZgEzAQABMwJmAQABMwFmAZkBAAEzAWYBzAEAATMBZgH/AQABMwGZAgABMwGZATMBAAEz
+        AZkBZgEAATMCmQEAATMBmQHMAQABMwGZAf8BAAEzAcwCAAEzAcwBMwEAATMBzAFmAQABMwHMAZkBAAEz
+        AswBAAEzAcwB/wEAATMB/wEzAQABMwH/AWYBAAEzAf8BmQEAATMB/wHMAQABMwL/AQABZgMAAWYBAAEz
+        AQABZgEAAWYBAAFmAQABmQEAAWYBAAHMAQABZgEAAf8BAAFmATMCAAFmAjMBAAFmATMBZgEAAWYBMwGZ
+        AQABZgEzAcwBAAFmATMB/wEAAmYCAAJmATMBAANmAQACZgGZAQACZgHMAQABZgGZAgABZgGZATMBAAFm
+        AZkBZgEAAWYCmQEAAWYBmQHMAQABZgGZAf8BAAFmAcwCAAFmAcwBMwEAAWYBzAGZAQABZgLMAQABZgHM
+        Af8BAAFmAf8CAAFmAf8BMwEAAWYB/wGZAQABZgH/AcwBAAHMAQAB/wEAAf8BAAHMAQACmQIAAZkBMwGZ
+        AQABmQEAAZkBAAGZAQABzAEAAZkDAAGZAjMBAAGZAQABZgEAAZkBMwHMAQABmQEAAf8BAAGZAWYCAAGZ
+        AWYBMwEAAZkBMwFmAQABmQFmAZkBAAGZAWYBzAEAAZkBMwH/AQACmQEzAQACmQFmAQADmQEAApkBzAEA
+        ApkB/wEAAZkBzAIAAZkBzAEzAQABZgHMAWYBAAGZAcwBmQEAAZkCzAEAAZkBzAH/AQABmQH/AgABmQH/
+        ATMBAAGZAcwBZgEAAZkB/wGZAQABmQH/AcwBAAGZAv8BAAHMAwABmQEAATMBAAHMAQABZgEAAcwBAAGZ
+        AQABzAEAAcwBAAGZATMCAAHMAjMBAAHMATMBZgEAAcwBMwGZAQABzAEzAcwBAAHMATMB/wEAAcwBZgIA
+        AcwBZgEzAQABmQJmAQABzAFmAZkBAAHMAWYBzAEAAZkBZgH/AQABzAGZAgABzAGZATMBAAHMAZkBZgEA
+        AcwCmQEAAcwBmQHMAQABzAGZAf8BAALMAgACzAEzAQACzAFmAQACzAGZAQADzAEAAswB/wEAAcwB/wIA
+        AcwB/wEzAQABmQH/AWYBAAHMAf8BmQEAAcwB/wHMAQABzAL/AQABzAEAATMBAAH/AQABZgEAAf8BAAGZ
+        AQABzAEzAgAB/wIzAQAB/wEzAWYBAAH/ATMBmQEAAf8BMwHMAQAB/wEzAf8BAAH/AWYCAAH/AWYBMwEA
+        AcwCZgEAAf8BZgGZAQAB/wFmAcwBAAHMAWYB/wEAAf8BmQIAAf8BmQEzAQAB/wGZAWYBAAH/ApkBAAH/
+        AZkBzAEAAf8BmQH/AQAB/wHMAgAB/wHMATMBAAH/AcwBZgEAAf8BzAGZAQAB/wLMAQAB/wHMAf8BAAL/
+        ATMBAAHMAf8BZgEAAv8BmQEAAv8BzAEAAmYB/wEAAWYB/wFmAQABZgL/AQAB/wJmAQAB/wFmAf8BAAL/
+        AWYBAAEhAQABpQEAA18BAAN3AQADhgEAA5YBAAPLAQADsgEAA9cBAAPdAQAD4wEAA+oBAAPxAQAD+AEA
+        AfAB+wH/AQABpAKgAQADgAMAAf8CAAH/AwAC/wEAAf8DAAH/AQAB/wEAAv8CAAP//wD/AP8A/wD/AP8A
+        /wD/AP8A/wAMAAL/AfIBBwOSAQcB8QH0Af8nAAH/ARsB/y8AAfMBBwGSAu8CBwGSAe0B9wHwAf8mAAEa
+        AUYBFgH/LQAB8wKSAbwB9AT/AfIB9wHtAe8B/yMAAf8BGgMlARYB/ysAAfMB9wGSAfEB9AT/AgAB9AH3
+        Ae0B8QH/IQAB/wEaAUYEJQGTAf8JABj/BQAB/wH0Av8B8AHtAfAB/wHxAbwB/wHxAfIDAAH0AfcB7wH0
+        IQABGgFGBiUBkwH/CAAB9BUHAfIB/wQAAfQBBwHwAf8B9AH3Ae8B/wEAAfQB9wH/AfMBBwQAAfIB7QHw
+        IAABGgklARYIAAHzFewBvAH/AgAB/wG8Au0B8gH/AfQB7QHxAf8CkgTtApIB8QH/AfQB7QH3HgAB/wEa
+        CyUBFgH/BgAB8wLsEe8C7AG8Av8B8AH3AZIBBwHyAf8BAAHxAe0B8wH/AfQB8wHxAfcB8wIHAfMB9AL/
+        Ae8Bkh0AAf8BGwFGDCUBGgH/BQAB8wLsEf8BkgHsAbwB/wHxAZIBBwHyAf8DAAHxAe0B8wEAAf8B9AHz
+        Ae8B8gHxAfcC9AL/Ae8B7R0AAf8Bbw0lAUYB8wUAAfMC7AH/DwAB/wGSAewBvAL/AfQC/wEAAv8BAAHz
+        Ae0B8gEAAfQBBwHvAvcB7wHtAu8B8gH/AfcB7x0AARoPJQGTAf8EAAHzAuwB/w8AAf8BkgHsAbwB/wIA
+        Av8B8gGSAbwB/wH0Ae0BvAQAAfMBBwH/AfEBvAH/AQAB9AHtAQccAAH/AUwPJQFGAf8EAAHzAuwB/w8A
+        Af8BkgHsAbwB/wEAAf8B8gHvAe0B7wHyAv8BBwGSAfQDAAH/AbwC/wEHAv8BBwGSAfIBABfzAf8DAAH/
+        BiUBRgGTAhoBRgYlAfQEAAHzAuwB/w8AAf8BkgHsAbwB/wHzAe8BkgHvAfIB9AH/AQAB/wHyAZIB7wH0
+        AgAB/wH0Av8B8wH0AfAB7QEHAf8BABfvAfQDAAEaBSUBRgEbBP8BbwUlARoEAAHzAuwB/w8AAf8BkgHs
+        AbwB/wHxAZIB8QP/AfIBBwEAAf8BvAHtAe8B9AUAAf8BBwHtAZIB8wH/AQAY/wMAARoFJQGTAf8EAAEa
+        BSUBkwQAAfMC7AH/DwAB/wGSAewBvAH/AQAB/wEAAf8B9AHvAZIB9wH0AQAB/wG8AZIB7QEHAfIB9AHz
+        AbwB7wHtAfcB8x4AARoFJQGTAf8EAAH0BSUBGgQAAfMC7AH/DwAB/wGSAewBvAH/AQAB/wHzAQcBkgHv
+        AfAB9AH/AgAB/wHyAQcBkgTtAe8B8AH0HwAB/wUlAZMB/wQAARoFJQEaBAAB8wLsEf8BkgHsAbwB/wH0
+        AQcB9wHtAfEB9AH/BQAC/wH0AfMC8gHzA/8B9AHwAf8dAAFGBSUB9AH/AQAC/wFGBCUBRgH/BAAB8xXs
+        AbwB/wH3Ae0BvAH0EQAB/wEHAe0BvB0AARsBRgQlAUYBkwIaAUYFJQGaAf8EAAHzFewBvAH/AQcB7QEH
+        AfMB/w4AAv8B8QHvAZIB8R0AAf8Bkw0lAW8B9AUAAfQV8QHzAv8B8QH3AZIBBwHyAf8LAAH/AfEBBwHt
+        Ae8B8gH/HgAB/wFvCyUBRgEbAf8FABj/AQAC/wHwAe0BkgEHAfQIAAH/AfIB7wGSAe8B8gL/IAAB/wFM
+        AUYHJQFGAW8B/yMAAfQBBwGSAe0BBwH0Af8DAAH/AfQB7wGSAfcB8AH0Af8jAAH/ARoBFgFMAUYBJQJG
+        ARYBGgH/JQAB/wHzAQcB9wGSAbwB8wH0AfMBBwGSAe8B8AH0Af8mAAL/AvQB8wL0Av8oAAH/AfQBvAGS
+        AfcB7wGSAe0B8QH0Af9cAAH0AbwB7wHxAf8jAAFCAU0BPgcAAT4DAAEoAwABZAMAATIDAAEBAQABAQUA
+        ASABAxYAA///AJIAB/8B+AEAA/8B8AMAAf8B4wX/AfgBAAF/Av8B8AMAAf8B4QX/AfABAAE/Av8B8AMA
+        Af8BgAX/AeABDAEfAv8B8AMAAf8BAAF/AcACAAE+AQABDgEfAv8B8AMAAf8BAAE/AcACAAE8AQIBDwEf
+        Av8B8AMAAf4BAAE/AcACAAEwAgABHwL/AfADAAH4AQABDwHAAwABQAEAAR8C/wHwAwAB8AEAAQcBwAIA
+        AQEBxAEAAR8C/wHwAwAB8AEAAQcBwwH/AfgBAgFEAQABHwL/AfADAAHwAQABAwHDAf8B+AEwAQcBgQEf
+        Av8B8AMAAeABAAEDAcMB/wH4ASABAwGAARAGAAHgAQABAwHDAf8B+AEAAUEBgAEQBgAB4AEAAQMBwwH/
+        AfgBAAEgAfgBEAYAAeABHgEDAcMB/wH4ASgBEAEAAX8C/wHwAwAB4AEeAQMBwwH/AfgBIAEYAQAD/wHw
+        AwAB4AEeAQMBwAMAAXwBAAEfAv8B8AMAAfABCAEDAcACAAEDAf8B/gEfAv8B8AMAAfABAAEDAcACAAEB
+        Af8B+AEfAv8B8AMAAfABAAEHAcADAAF/AfABHwL/AfADAAH4AQABBwHAAgABIAE/AcABPwL/AfADAAH8
+        AQABHwP/AfwBBwEAA/8B8AMAAf4BAAE/A/8B/gEAAQMD/wHwAwAB/wEAAX8E/wGAAQ8D/wHwAwAH/wHw
+        AX8D/wHwAwAL
+</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>此处是显示和配置航拍图及激光雷达三维地图的位置，首先点击“开始车辆激光地图建模”，按钮变红色，小车收到后，会在小车操作界面亮起“开始建模”窗口，此时可操作小车对场地进行遥控跑图建模。为保障建模精度可对一个位置多次，当需要结束后，点击“结束车辆激光地图建模”，然后点击“下载车辆激光地图”，下载成功后按钮变为红色。接着点击“上传航拍图”，弹出上传框，上传成功后变为红色。此时再次点击“下载车辆激光地图”和“上传航拍图”可在此框查看效果。点击融合时，系统就根据激光雷达的位置数据建立坐标，需将雷达图和航拍图叠加显示，航拍图在下雷达图在上，同时调整航拍图的左右上下大小。并且可用左侧的按钮在融合地图上添加“充电位置”“厂区名称显示位置”“工作区域画框（这个框四个边框可拉动，当小车进入此框后会识别到，为工单任务服务）”“工作区域编号”等，添加好后，小车就知道方位。最后点击保存。保存成功后，系统就将地图上传到小车端的地图显示界面。</value>
+  </data>
+</root>
