@@ -45,10 +45,11 @@
             this.button10 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.label2 = new System.Windows.Forms.Label();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -260,7 +261,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panel1, 6);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.webBrowser1);
+            this.panel1.Controls.Add(this.webView21);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 47);
             this.panel1.Name = "panel1";
@@ -272,12 +273,25 @@
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(127, 102);
+            this.label1.Location = new System.Drawing.Point(153, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(515, 163);
             this.label1.TabIndex = 12;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webView21.ForeColor = System.Drawing.Color.Transparent;
+            this.webView21.Location = new System.Drawing.Point(0, 0);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(775, 463);
+            this.webView21.TabIndex = 13;
+            this.webView21.ZoomFactor = 1D;
             // 
             // label2
             // 
@@ -288,18 +302,6 @@
             this.label2.Size = new System.Drawing.Size(253, 44);
             this.label2.TabIndex = 13;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.ScrollBarsEnabled = false;
-            this.webBrowser1.Size = new System.Drawing.Size(775, 463);
-            this.webBrowser1.TabIndex = 14;
-            this.webBrowser1.Visible = false;
-            this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
             // 
             // XCConfigForm1
             // 
@@ -317,6 +319,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,7 +341,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
