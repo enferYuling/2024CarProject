@@ -956,12 +956,12 @@ namespace CarProject.Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //InitializeVLC();
+            // InitializeVLC();
             //appContainer1.AppFilename = @"E:\\刘玉玲\\WeChat Files\\wxid_wx7gylqo74fa22\\FileStorage\\File\\2024-09\\XPlayer\\XPlayer\\ZQTool.exe";
 
             //appContainer1.Start();
 
-            EXE();
+           EXE();
         }
 
         private void appContainer1_Resize(object sender, EventArgs e)
