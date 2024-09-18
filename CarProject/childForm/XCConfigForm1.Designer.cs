@@ -35,7 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.xzjgdt_btn = new System.Windows.Forms.Button();
             this.schpt_btn = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.rhdt_btn = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button7 = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button2, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.xzjgdt_btn, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.schpt_btn, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.rhdt_btn, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.button6, 6, 1);
             this.tableLayoutPanel1.Controls.Add(this.button7, 6, 2);
             this.tableLayoutPanel1.Controls.Add(this.button8, 6, 3);
@@ -144,19 +144,19 @@
             this.schpt_btn.UseVisualStyleBackColor = false;
             this.schpt_btn.Click += new System.EventHandler(this.schpt_btn_Click);
             // 
-            // button5
+            // rhdt_btn
             // 
-            this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(784, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 34);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "融合地图";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.rhdt_btn.BackColor = System.Drawing.Color.Red;
+            this.rhdt_btn.FlatAppearance.BorderSize = 0;
+            this.rhdt_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rhdt_btn.ForeColor = System.Drawing.Color.White;
+            this.rhdt_btn.Location = new System.Drawing.Point(784, 3);
+            this.rhdt_btn.Name = "rhdt_btn";
+            this.rhdt_btn.Size = new System.Drawing.Size(77, 34);
+            this.rhdt_btn.TabIndex = 4;
+            this.rhdt_btn.Text = "融合地图";
+            this.rhdt_btn.UseVisualStyleBackColor = false;
+            this.rhdt_btn.Click += new System.EventHandler(this.rhdt_btn_Click);
             // 
             // button6
             // 
@@ -331,7 +331,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button xzjgdt_btn;
         private System.Windows.Forms.Button schpt_btn;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button rhdt_btn;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;

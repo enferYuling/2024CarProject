@@ -95,10 +95,17 @@ namespace CarProject.childForm
         {
 
         }
+ 
 
-        private void button5_Click(object sender, EventArgs e)
+        private void rhdt_btn_Click(object sender, EventArgs e)
         {
-           
+            string str_url = "http://8.137.119.17:82/API/loadjgdt"; //地图的路径+名称
+
+            Uri url = new Uri(str_url);
+
+
+
+            webView21.Source = url;
         }
     }
 }
