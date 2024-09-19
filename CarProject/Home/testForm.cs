@@ -896,7 +896,7 @@ namespace CarProject.Home
 
             videoView1.Dock = DockStyle.Fill;
             //var media = new Media(libVLC, new Uri("rtsp://admin:lwny1234@115.236.153.177:53672/h264/ch1/main/av_stream"));
-            var media = new Media(libVLC, new Uri("rtsp://admin:lwny1234@192.168.1.4:53672/h264/ch1/main/av_stream"));
+            var media = new Media(libVLC, new Uri("rtsp://admin:lwny1234@5u4zkzk8e.shenzhuo.vip:10393/h264/ch1/main/av_stream"));
             mediaPlayer.Play(media);
             // 设置 RTSP 流地址
             //   mediaPlayer.Play(new Media(libVLC, "rtsp://8.137.119.17:554/live/test1"));
@@ -923,6 +923,7 @@ namespace CarProject.Home
  private void EXE()
         {
             appContainer1.AppFilename = @"E:\\项目\\2024CarProject\\EasyPlayer(src)\\x64\\Debug\\EasyPlayer.exe";
+            appContainer1.Dock = DockStyle.Fill;
             appContainer1.Start();
         }
 
@@ -957,12 +958,12 @@ namespace CarProject.Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-              InitializeVLC();
+              //InitializeVLC();
             //appContainer1.AppFilename = @"E:\\刘玉玲\\WeChat Files\\wxid_wx7gylqo74fa22\\FileStorage\\File\\2024-09\\XPlayer\\XPlayer\\ZQTool.exe";
 
             //appContainer1.Start();
 
-          // EXE();
+         EXE();
         }
 
         private void appContainer1_Resize(object sender, EventArgs e)
