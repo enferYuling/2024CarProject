@@ -368,7 +368,7 @@ void CDlgVideo::OnBnClickedButtonPreview()
 		else if (0 == strncmp(szURL, "http", 4))	sourceType = LIVE_CHANNEL_SOURCE_TYPE_HLS;
 		else if (0 == strncmp(szURL, "file", 4))	sourceType = LIVE_CHANNEL_SOURCE_TYPE_FILE;
 
-		int queueSize = 1024 * 1024 * 2;		//2MB
+		int queueSize = 1024 * 1024 * 10;		//2MB
 		if (sourceType == LIVE_CHANNEL_SOURCE_TYPE_HLS)		queueSize = 1024 * 1024 * 5;		//5MB
 
 #ifdef _DEBUG1
@@ -395,7 +395,8 @@ void CDlgVideo::OnBnClickedButtonPreview()
 
 			libEasyPlayer_SetDecodeType(playerHandle, m_ChannelId, onlyDecodeKeyFrame);
 
-			int iPos = pSliderCache->GetPos();
+			int iPos = 1;
+				/* pSliderCache->GetPos();*/
 			libEasyPlayer_SetPlayFrameCache(playerHandle, m_ChannelId, iPos);		//ÉèÖÃ»º´æ
 			//libEasyPlayer_StartPlaySound(playerHandle, m_ChannelId);				//²¥·ÅÉùÒô
 			if (NULL != pDlgRender)	pDlgRender->SetChannelId(m_ChannelId);
