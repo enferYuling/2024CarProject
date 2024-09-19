@@ -895,7 +895,8 @@ namespace CarProject.Home
             videoView1.MediaPlayer = mediaPlayer;
 
             videoView1.Dock = DockStyle.Fill;
-            var media = new Media(libVLC, new Uri("rtsp://admin:lwny1234@115.236.153.177:53672/h264/ch1/main/av_stream"));
+            //var media = new Media(libVLC, new Uri("rtsp://admin:lwny1234@115.236.153.177:53672/h264/ch1/main/av_stream"));
+            var media = new Media(libVLC, new Uri("rtsp://admin:lwny1234@192.168.1.4:53672/h264/ch1/main/av_stream"));
             mediaPlayer.Play(media);
             // 设置 RTSP 流地址
             //   mediaPlayer.Play(new Media(libVLC, "rtsp://8.137.119.17:554/live/test1"));

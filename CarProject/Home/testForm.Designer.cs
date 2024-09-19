@@ -81,17 +81,17 @@ namespace CarProject.Home
             this.appContainer1.AppProcess = null;
             this.appContainer1.Location = new System.Drawing.Point(0, 0);
             this.appContainer1.Name = "appContainer1";
-            this.appContainer1.Size = new System.Drawing.Size(686, 519);
+            this.appContainer1.Size = new System.Drawing.Size(195, 185);
             this.appContainer1.TabIndex = 19;
             this.appContainer1.Resize += new System.EventHandler(this.appContainer1_Resize);
             // 
             // videoView1
             // 
             this.videoView1.BackColor = System.Drawing.Color.Black;
-            this.videoView1.Location = new System.Drawing.Point(785, 12);
+            this.videoView1.Location = new System.Drawing.Point(201, 29);
             this.videoView1.MediaPlayer = null;
             this.videoView1.Name = "videoView1";
-            this.videoView1.Size = new System.Drawing.Size(250, 194);
+            this.videoView1.Size = new System.Drawing.Size(716, 478);
             this.videoView1.TabIndex = 20;
             this.videoView1.Text = "videoView1";
             // 
