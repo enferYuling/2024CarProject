@@ -26,16 +26,16 @@ namespace CarProject
             builder.Register(c => SqlSugarConfig.GetInstance()).As<SqlSugarClient>().SingleInstance();
 
             // Register forms
-           // builder.RegisterType<Home.testForm>().AsSelf().InstancePerDependency();
+            builder.RegisterType<Home.testForm>().AsSelf().InstancePerDependency();
             //builder.RegisterType<Home.Home>().AsSelf().InstancePerDependency();
-              builder.RegisterType<LoginIndex>().AsSelf().InstancePerDependency();
+            //  builder.RegisterType<LoginIndex>().AsSelf().InstancePerDependency();
 
             Container = builder.Build();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(Container.Resolve<Home.testForm>());
+            Application.Run(Container.Resolve<Home.testForm>());
             // Application.Run(Container.Resolve<Home.Home> ());
-              Application.Run(Container.Resolve<LoginIndex>());
+             // Application.Run(Container.Resolve<LoginIndex>());
 
         }
     }
