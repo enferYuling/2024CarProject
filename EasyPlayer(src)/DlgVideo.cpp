@@ -368,7 +368,7 @@ void CDlgVideo::OnBnClickedButtonPreview()
 		else if (0 == strncmp(szURL, "http", 4))	sourceType = LIVE_CHANNEL_SOURCE_TYPE_HLS;
 		else if (0 == strncmp(szURL, "file", 4))	sourceType = LIVE_CHANNEL_SOURCE_TYPE_FILE;
 
-		int queueSize = 1024 * 1024 * 10;		//2MB
+		int queueSize = 1024 * 1024 * 2;		//2MB
 		if (sourceType == LIVE_CHANNEL_SOURCE_TYPE_HLS)		queueSize = 1024 * 1024 * 5;		//5MB
 
 #ifdef _DEBUG1
