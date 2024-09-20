@@ -40,7 +40,7 @@
             this.register_btn = new System.Windows.Forms.Button();
             this.Login_btn = new System.Windows.Forms.Button();
             this.editpwd_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pwdfind_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +86,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.9115F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.0885F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.account_text, 1, 1);
@@ -138,7 +138,7 @@
             this.label4.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.Location = new System.Drawing.Point(105, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(320, 25);
+            this.label4.Size = new System.Drawing.Size(319, 25);
             this.label4.TabIndex = 5;
             this.label4.Text = "我已阅读，并同意《用户远程操作协议》";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -160,7 +160,7 @@
             // 
             this.register_btn.Dock = System.Windows.Forms.DockStyle.Left;
             this.register_btn.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.register_btn.Location = new System.Drawing.Point(231, 215);
+            this.register_btn.Location = new System.Drawing.Point(230, 215);
             this.register_btn.Name = "register_btn";
             this.register_btn.Size = new System.Drawing.Size(69, 31);
             this.register_btn.TabIndex = 8;
@@ -172,7 +172,7 @@
             // 
             this.Login_btn.Dock = System.Windows.Forms.DockStyle.Right;
             this.Login_btn.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Login_btn.Location = new System.Drawing.Point(156, 215);
+            this.Login_btn.Location = new System.Drawing.Point(155, 215);
             this.Login_btn.Name = "Login_btn";
             this.Login_btn.Size = new System.Drawing.Size(69, 31);
             this.Login_btn.TabIndex = 7;
@@ -195,20 +195,21 @@
             this.editpwd_btn.UseVisualStyleBackColor = false;
             this.editpwd_btn.Click += new System.EventHandler(this.editpwd_btn_Click);
             // 
-            // button1
+            // pwdfind_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(256, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 26);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "密码找回";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
+            this.pwdfind_btn.BackColor = System.Drawing.Color.White;
+            this.pwdfind_btn.FlatAppearance.BorderSize = 0;
+            this.pwdfind_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pwdfind_btn.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pwdfind_btn.ForeColor = System.Drawing.Color.Black;
+            this.pwdfind_btn.Location = new System.Drawing.Point(256, 313);
+            this.pwdfind_btn.Name = "pwdfind_btn";
+            this.pwdfind_btn.Size = new System.Drawing.Size(82, 26);
+            this.pwdfind_btn.TabIndex = 9;
+            this.pwdfind_btn.Text = "密码找回";
+            this.pwdfind_btn.UseVisualStyleBackColor = false;
+            this.pwdfind_btn.Visible = false;
+            this.pwdfind_btn.Click += new System.EventHandler(this.pwdfind_btn_Click);
             // 
             // LoginIndex
             // 
@@ -217,7 +218,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(560, 371);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pwdfind_btn);
             this.Controls.Add(this.editpwd_btn);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -246,7 +247,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button Login_btn;
         private System.Windows.Forms.Button editpwd_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pwdfind_btn;
         private System.Windows.Forms.Button register_btn;
     }
 }

@@ -90,5 +90,10 @@ namespace CarProject.Login
         {
             checkBox1.Checked = true;
         }
+
+        private void pwdfind_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
