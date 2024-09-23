@@ -48,6 +48,7 @@ using System.Drawing.Imaging;
 using LibVLCSharp.WinForms;
 using AForge.Video.DirectShow;
 using AForge.Video;
+using System.Net.NetworkInformation;
 
 
 
@@ -958,17 +959,22 @@ namespace CarProject.Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-              //InitializeVLC();
+            //InitializeVLC();
             //appContainer1.AppFilename = @"E:\\刘玉玲\\WeChat Files\\wxid_wx7gylqo74fa22\\FileStorage\\File\\2024-09\\XPlayer\\XPlayer\\ZQTool.exe";
 
             //appContainer1.Start();
 
-         EXE();
+            //  EXE();
+            NetWork();
         }
 
         private void appContainer1_Resize(object sender, EventArgs e)
         {
 
+        } 
+        public void NetWork()
+        {
+             
         }
     }
 }

@@ -40,6 +40,7 @@ namespace CarProject.Home
             this.videoView1 = new LibVLCSharp.WinForms.VideoView();
             this.vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
             this.appContainer1 = new SmileWei.EmbeddedApp.AppContainer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.SuspendLayout();
@@ -107,11 +108,21 @@ namespace CarProject.Home
             this.appContainer1.TabIndex = 19;
             this.appContainer1.Resize += new System.EventHandler(this.appContainer1_Resize);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(409, 437);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "label1";
+            // 
             // testForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 714);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.appContainer1);
             this.Controls.Add(this.vlcControl1);
             this.Controls.Add(this.videoView1);
@@ -123,6 +134,7 @@ namespace CarProject.Home
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -134,5 +146,6 @@ namespace CarProject.Home
         private SmileWei.EmbeddedApp.AppContainer appContainer1;
         private LibVLCSharp.WinForms.VideoView videoView1;
         private Vlc.DotNet.Forms.VlcControl vlcControl1;
+        private System.Windows.Forms.Label label1;
     }
 }
