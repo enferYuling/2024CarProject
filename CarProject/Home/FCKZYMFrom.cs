@@ -63,7 +63,7 @@ namespace CarProject.Home
         {
             //IO();
             //  InitCamera();
-           string propath= Directory.GetCurrentDirectory();//项目地址
+            string propath = Directory.GetCurrentDirectory();//项目地址
             string processName = "EasyPlayer";
 
             // 找到所有匹配的进程
@@ -439,6 +439,371 @@ namespace CarProject.Home
                 YDKZK("115.236.153.177", 13408);
                 timer1.Stop();
             }
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ndxhllzl_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void swgd_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fcswgdsxt_app_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void title_lab2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ndxcgzzl_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ndfcyszl_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ndfcydzl_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ypcc_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void byfcrgkqcs_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fwqzt_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wbwd_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nbwd_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void windspeed_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void XCYPCC_LAB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void snq_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fcsngdsxt_app_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xcfwqzt_lab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void snkxz_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void title_lab3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void sb_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eb_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yb_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jxbjzzyyd_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void title_lab1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fcsnkxzsxt_app_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
