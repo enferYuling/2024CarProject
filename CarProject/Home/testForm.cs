@@ -967,7 +967,7 @@ namespace CarProject.Home
 
             //appContainer1.Start();
 
-              EXE();
+            //  EXE();
           //  NetWork();
         }
 

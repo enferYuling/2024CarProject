@@ -1,5 +1,8 @@
-﻿using System;
+﻿using FFmpeg.AutoGen;
+using Messages.std_msgs;
+using System;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 
 public class IDM_NETSDK
 {
@@ -225,7 +228,7 @@ public class IDM_NETSDK
     }
 
 
-    /* 设备参数信息 */ 
+    /* 设备参数信息 */
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
     public struct IDM_DEV_DEVICE_INFO_S
     {
@@ -243,7 +246,7 @@ public class IDM_NETSDK
         public ushort usPort;
         public byte ucRemainLoginTimes;
         public byte ucPasswordLevel;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst =  IDM_DEVICE_IP_MAX_LEN)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_DEVICE_IP_MAX_LEN)]
         public string szLocalIP;
         public uint ulRemainLockTime;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
@@ -267,83 +270,121 @@ public class IDM_NETSDK
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 236)]
         public byte[] aucRes;
     }
-
-    /* 设备重连 */
-    [StructLayout(LayoutKind.Sequential)]
-    public struct IDM_DEV_RECONNECT_INFO_S
-    {
-        public uint uiInterval;  // 重连时间间隔，单位 : 毫秒(最小值3000)
-        public int ucEnable;   // 是否重连，0 - 不重连，1 - 重连，默认值为0
-
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_DEVICE_IP_MAX_LEN)]
-        public byte[] ucRes;
-
-    }
-
-
-
-    /* 登录结构体 */
-     
+    /* 设置设备参数信息 */
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
-    public struct IDM_DEV_USER_LOGIN_INFO_S
+    public struct tagIDM_DEV_IPPARACFG
     {
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst =  IDM_DEVICE_IP_MAX_LEN)]
+        ulong ulEnable;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_DEVICE_ID_LEN)]
+        public string szDeviceID;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_DEVICE_NAME_LEN)]
+        public string szDeviceName;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_DEVICE_IP_MAX_LEN)]
         public string szDeviceIP;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_DEVICE_MODEL_LEN)]
+        public string szDeviceModel;
         public ushort usPort;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)]
-        public byte[] ucRes1;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)]
-        public byte[] ucRes2;
+        public byte ucProtocol;
+        public byte ucOnline;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_USERNAME_MAX_LEN)]
         public string szUsername;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst =  IDM_PASSWORD_MAX_LEN)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_PASSWORD_MAX_LEN)]
         public string szPassword;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst =  IDM_DEVICE_ID_LEN)]
-        public string szDeviceID;
-        public int lLoginMode;
-        // 需要定义IDM_DEV_Login_Callback_PF委托
-        public IDM_DEV_Login_Callback_PF pfLoginCallBack;
-        // 需要定义对应的IntPtr或对象类型
-        public IntPtr pUserData;
-        public byte ucCertLoginMode;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 43)]
-        public string szTargetIP;
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 20)]
-        public byte[] aucRes;
-    }
+
+        public ushort usChannelSize;
+        public ushort usChannelNum;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+        public string szChannelEnable;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
+        public string szLocalChanNo;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+        public string szLocalChanOnline;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+        public string aucRes;
+
+    //    union    {    
+    //        IDM_DEV_GB28181_INFO_S stGB28181Info;
+    //    IDM_DEV_STREAM_URL_S stStreamUrl;
+    //};
+}
 
 
-    /* 预览参数结构体 */
+
+/* 设备重连 */
+[StructLayout(LayoutKind.Sequential)]
+public struct IDM_DEV_RECONNECT_INFO_S
+{
+    public uint uiInterval;  // 重连时间间隔，单位 : 毫秒(最小值3000)
+    public int ucEnable;   // 是否重连，0 - 不重连，1 - 重连，默认值为0
+
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_DEVICE_IP_MAX_LEN)]
+    public byte[] ucRes;
+}
+
+
+
+/* 登录结构体 */
+
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
-    public struct IDM_DEV_PREVIEW_INFO_S
-    {
-        public ulong ulChannel;           // 通道号
-        public ulong ulStreamType;        // 码流类型
-        public ulong ulLinkMode;          // 连接方式
-        public byte ulStreamTimeout;     // 收流超时时间
-        public byte ucStreamMode;        // 流模式
-        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 254)]
-        public byte[] aucRes;           // 预留
-    }
+public struct IDM_DEV_USER_LOGIN_INFO_S
+{
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst =  IDM_DEVICE_IP_MAX_LEN)]
+    public string szDeviceIP;
+    public ushort usPort;
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)]
+    public byte[] ucRes1;
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 1)]
+    public byte[] ucRes2;
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_USERNAME_MAX_LEN)]
+    public string szUsername;
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst =  IDM_PASSWORD_MAX_LEN)]
+    public string szPassword;
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst =  IDM_DEVICE_ID_LEN)]
+    public string szDeviceID;
+    public int lLoginMode;
+    // 需要定义IDM_DEV_Login_Callback_PF委托
+        public IDM_DEV_Login_Callback_PF pfLoginCallBack;
+    // 需要定义对应的IntPtr或对象类型
+        public IntPtr pUserData;
+    public byte ucCertLoginMode;
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 43)]
+    public string szTargetIP;
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 20)]
+    public byte[] aucRes;
+}
 
-    /* 时间参数 CONFIG_SYSTEM_TIME */
+
+/* 预览参数结构体 */
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
+public struct IDM_DEV_PREVIEW_INFO_S
+{
+    public ulong ulChannel;           // 通道号
+    public ulong ulStreamType;        // 码流类型
+    public ulong ulLinkMode;          // 连接方式
+    public byte ulStreamTimeout;     // 收流超时时间
+    public byte ucStreamMode;        // 流模式
+    [MarshalAs(UnmanagedType.ByValArray, SizeConst = 254)]
+    public byte[] aucRes;           // 预留
+}
+
+/* 时间参数 CONFIG_SYSTEM_TIME */
     [StructLayout(LayoutKind.Sequential)]
-    public struct IDM_DEV_TIME_PARAM_S
-    {
-        public int usYear;                                 /* 年 */
-        public int usMonth;                                /* 月 */
-        public int usDay;                                  /* 日 */
-        public int usHour;                                 /* 时 */
-        public int usMinute;                               /* 分 */
-        public int usSecond;                               /* 秒 */
-    }
+public struct IDM_DEV_TIME_PARAM_S
+{
+    public int usYear;                                 /* 年 */
+    public int usMonth;                                /* 月 */
+    public int usDay;                                  /* 日 */
+    public int usHour;                                 /* 时 */
+    public int usMinute;                               /* 分 */
+    public int usSecond;                               /* 秒 */
+}
 
 
-    /* 手动抓拍参数 */
+/* 手动抓拍参数 */
     [StructLayout(LayoutKind.Sequential)]
-    public struct IDM_DEV_MANUALSNAP_S
-    {
-        public uint ulChanID;
+public struct IDM_DEV_MANUALSNAP_S
+{
+    public uint ulChanID;
         public uint ulStreamType;
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32, ArraySubType = UnmanagedType.I1)]
         public byte[] aucRes;
@@ -500,7 +541,17 @@ public class IDM_NETSDK
     /// <returns></returns>
     [DllImport(@"idm_netsdk.dll")]
     public static extern int IDM_DEV_Cleanup();
-
+    /// <summary>
+    /// 获取设备配置
+    /// </summary>
+    /// <returns></returns>
+    [DllImport(@"idm_netsdk.dll")]
+    public static extern int IDM_DEV_GetConfig(long lUserID,
+  ulong ulCommand,
+  ulong ulChannel,
+  IDM_DEV_IPPARACFG_S  pBuffer,
+  ulong ulBufferSize
+);
     #endregion
 
 } 
