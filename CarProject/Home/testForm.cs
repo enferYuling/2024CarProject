@@ -921,11 +921,14 @@ namespace CarProject.Home
             ffmpeg.av_register_all();
            
         }
- private void EXE()
+        private void EXE()
         {
-            appContainer1.AppFilename = @"E:\\项目\\2024CarProject\\EasyPlayer(src)\\x64\\Debug\\EasyPlayer.exe";
-            appContainer1.Dock = DockStyle.Fill;
+            appContainer1.AppFilename = @"E:\项目\2024CarProject\CarProject\bin\Debug\fcsxt1\EasyPlayer.exe"; 
+            appContainer2.AppFilename = @"E:\项目\2024CarProject\CarProject\bin\Debug\fcsxt2\EasyPlayer.exe"; 
+            appContainer3.AppFilename = @"E:\项目\2024CarProject\CarProject\bin\Debug\fcsxt3\EasyPlayer.exe"; 
             appContainer1.Start();
+            appContainer2.Start();
+            appContainer3.Start();
         }
 
         private unsafe void PlayRtspStream(string rtspUrl)
@@ -964,8 +967,8 @@ namespace CarProject.Home
 
             //appContainer1.Start();
 
-            //  EXE();
-            NetWork();
+              EXE();
+          //  NetWork();
         }
 
         private void appContainer1_Resize(object sender, EventArgs e)

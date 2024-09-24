@@ -40,7 +40,8 @@ namespace CarProject.Home
             this.videoView1 = new LibVLCSharp.WinForms.VideoView();
             this.vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
             this.appContainer1 = new SmileWei.EmbeddedApp.AppContainer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.appContainer2 = new SmileWei.EmbeddedApp.AppContainer(this.components);
+            this.appContainer3 = new SmileWei.EmbeddedApp.AppContainer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.SuspendLayout();
@@ -79,10 +80,10 @@ namespace CarProject.Home
             // videoView1
             // 
             this.videoView1.BackColor = System.Drawing.Color.Black;
-            this.videoView1.Location = new System.Drawing.Point(674, 84);
+            this.videoView1.Location = new System.Drawing.Point(997, 29);
             this.videoView1.MediaPlayer = null;
             this.videoView1.Name = "videoView1";
-            this.videoView1.Size = new System.Drawing.Size(343, 256);
+            this.videoView1.Size = new System.Drawing.Size(93, 76);
             this.videoView1.TabIndex = 20;
             this.videoView1.Text = "videoView1";
             // 
@@ -104,25 +105,35 @@ namespace CarProject.Home
             this.appContainer1.AppProcess = null;
             this.appContainer1.Location = new System.Drawing.Point(0, 0);
             this.appContainer1.Name = "appContainer1";
-            this.appContainer1.Size = new System.Drawing.Size(214, 211);
+            this.appContainer1.Size = new System.Drawing.Size(516, 344);
             this.appContainer1.TabIndex = 19;
             this.appContainer1.Resize += new System.EventHandler(this.appContainer1_Resize);
             // 
-            // label1
+            // appContainer2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(409, 437);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "label1";
+            this.appContainer2.AppFilename = "";
+            this.appContainer2.AppProcess = null;
+            this.appContainer2.Location = new System.Drawing.Point(522, 0);
+            this.appContainer2.Name = "appContainer2";
+            this.appContainer2.Size = new System.Drawing.Size(516, 344);
+            this.appContainer2.TabIndex = 20;
+            // 
+            // appContainer3
+            // 
+            this.appContainer3.AppFilename = "";
+            this.appContainer3.AppProcess = null;
+            this.appContainer3.Location = new System.Drawing.Point(12, 358);
+            this.appContainer3.Name = "appContainer3";
+            this.appContainer3.Size = new System.Drawing.Size(516, 344);
+            this.appContainer3.TabIndex = 21;
             // 
             // testForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 714);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.appContainer3);
+            this.Controls.Add(this.appContainer2);
             this.Controls.Add(this.appContainer1);
             this.Controls.Add(this.vlcControl1);
             this.Controls.Add(this.videoView1);
@@ -134,7 +145,6 @@ namespace CarProject.Home
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -146,6 +156,7 @@ namespace CarProject.Home
         private SmileWei.EmbeddedApp.AppContainer appContainer1;
         private LibVLCSharp.WinForms.VideoView videoView1;
         private Vlc.DotNet.Forms.VlcControl vlcControl1;
-        private System.Windows.Forms.Label label1;
+        private SmileWei.EmbeddedApp.AppContainer appContainer2;
+        private SmileWei.EmbeddedApp.AppContainer appContainer3;
     }
 }
