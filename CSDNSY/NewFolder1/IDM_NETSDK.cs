@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using ZedGraph;
 
 
     public class IDM_NETSDK
@@ -211,7 +212,7 @@ using System.Threading.Tasks;
         {
             public byte ucStreamType;
             public byte ucVideoType;
-            public byte ucEncodeType;
+            public byte ucEcodeType;
             public byte ucEncodeLevel;
             public byte ucSmartEncode;
             public byte ucQuality;
@@ -273,12 +274,72 @@ using System.Threading.Tasks;
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3000, ArraySubType = UnmanagedType.I1)]
             public byte[] aucRes;
         }
+    /* 设置设备参数信息 */
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
+    public struct IDM_DEV_IPPARACFG_S
+    {
+        ulong ulEnable;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_DEVICE_ID_LEN, ArraySubType = UnmanagedType.I1)]
+        public byte[] szDeviceID;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_DEVICE_NAME_LEN, ArraySubType = UnmanagedType.I1)]
+        public byte[] szDeviceName;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_DEVICE_IP_MAX_LEN, ArraySubType = UnmanagedType.I1)]
+        public byte[] szDeviceIP; 
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_DEVICE_MODEL_LEN, ArraySubType = UnmanagedType.I1)]
+        public byte[] szDeviceModel;
+        public ushort usPort;
+        public byte ucProtocol;
+        public byte ucOnline;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_USERNAME_MAX_LEN, ArraySubType = UnmanagedType.I1)]
+        public byte[] szUsername;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_PASSWORD_MAX_LEN, ArraySubType = UnmanagedType.I1)]
+        public byte[] szPassword;
 
-        /* 设备重连 */
-        [StructLayout(LayoutKind.Sequential)]
-        public struct IDM_DEV_RECONNECT_INFO_S
-        {
-            public uint uiInterval;  // 重连时间间隔，单位 : 毫秒(最小值3000)
+        public ushort usChannelSize;
+        public ushort usChannelNum;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32, ArraySubType = UnmanagedType.I1)]
+        public byte[] szChannelEnable; 
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 256, ArraySubType = UnmanagedType.I1)]
+        public byte[] szLocalChanNo;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32, ArraySubType = UnmanagedType.I1)]
+        public byte[] szLocalChanOnline;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 32, ArraySubType = UnmanagedType.I1)]
+        public byte[] aucRes;
+
+        //    union    {    
+        //        IDM_DEV_GB28181_INFO_S stGB28181Info;
+        public  IDM_DEV_STREAM_URL_S stStreamUrl;
+        //};
+    }
+    /// <summary>
+    /// 媒体流URL结构体 
+    /// </summary>
+    public struct IDM_DEV_STREAM_URL_S
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_RTSPURL_MAX_LEN)]
+        public string szRtspUrl;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_RTSPURL_MAX_LEN)]
+        public string szSubRtspUrl;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+        public string aucRes; 
+    }
+    /// <summary>
+    /// GB28181接入信息结构体 
+    /// </summary>
+    public struct  IDM_DEV_GB28181_INFO_S 
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = IDM_DEVICE_ID_LEN)]
+        public string szDeviceRegID;
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+        public string aucRes; 
+    } 
+
+
+    /* 设备重连 */
+    [StructLayout(LayoutKind.Sequential)]
+    public struct IDM_DEV_RECONNECT_INFO_S
+    {
+        public uint uiInterval;  // 重连时间间隔，单位 : 毫秒(最小值3000)
             public int ucEnable;   // 是否重连，0 - 不重连，1 - 重连，默认值为0
 
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = IDM_DEVICE_IP_MAX_LEN)]
@@ -469,11 +530,30 @@ using System.Threading.Tasks;
         /// <returns></returns>
         [DllImport(@"NetSDK/idm_netsdk.dll")]
         public static extern int IDM_DEV_SetReconnect(IDM_DEV_RECONNECT_INFO_S stReconnectInfo);
+    /// <summary>
+    /// 修改参数
+    /// </summary>
+    /// <param name="lUserID"></param>
+    /// <param name="ulCommand"></param>
+    /// <param name="ulChannel"></param>
+    /// <param name="pBuffer"></param>
+    /// <param name="ulBufferSize"></param>
+    /// <returns></returns>
+    [DllImport(@"NetSDK/idm_netsdk.dll")]
+    public static extern int IDM_DEV_SetConfig(int lUserID, uint ulCommand, uint ulChannel, IntPtr pBuffer, uint ulBufferSize);
+ /// <summary>
+ /// 获取参数
+ /// </summary>
+ /// <param name="lUserID"></param>
+ /// <param name="ulCommand"></param>
+ /// <param name="ulChannel"></param>
+ /// <param name="pBuffer"></param>
+ /// <param name="ulBufferSize"></param>
+ /// <returns></returns>
+    [DllImport(@"NetSDK/idm_netsdk.dll")]
+    public static extern int IDM_DEV_GetConfig(int lUserID, uint ulCommand, uint ulChannel,ref IntPtr pBuffer, uint ulBufferSize);
 
-        [DllImport(@"NetSDK/idm_netsdk.dll")]
-        public static extern int IDM_DEV_SetConfig(int lUserID, uint ulCommand, uint ulChannel, IntPtr pBuffer, uint ulBufferSize);
-
-        [DllImport(@"NetSDK/idm_netsdk.dll")]
+    [DllImport(@"NetSDK/idm_netsdk.dll")]
         public static extern int IDM_DEV_SetRealPlayESCallback(int lRealPlayHandle, IDM_DEV_RealPlayES_Callback_PF pfRealPlayCallback, IntPtr pUserData);
         /// <summary>
         /// 设备登出
@@ -489,9 +569,20 @@ using System.Threading.Tasks;
         /// <returns></returns>
         [DllImport(@"NetSDK/idm_netsdk.dll")]
         public static extern int IDM_DEV_Cleanup();
+//    /// <summary>
+//    /// 获取设备配置
+//    /// </summary>
+//    /// <returns></returns>
+//    [DllImport(@"idm_netsdk.dll")]
+//    public static extern long IDM_DEV_SetConfig(long lUserID,
+//  ulong ulCommand,
+//  ulong ulChannel,
+//  IDM_DEV_IPPARACFG_S
+// pBuffer,
+//  ulong ulBufferSize
+//);
+    #endregion
 
-        #endregion
-
-    }
+}
 
 

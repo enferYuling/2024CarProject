@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using static IDM_NETSDK;
 
 namespace CSDNSY
 {
@@ -12,6 +15,7 @@ namespace CSDNSY
         int mRealPlayHandle = -1;
         int mlPort = -1;
         int mChannel = -1;
+        byte[] szDeviceID;
 
         bool IsInit = false;
         bool IsLogin = false;
@@ -67,6 +71,8 @@ namespace CSDNSY
             if (IsLogin)
             {
                 mChannel = device_info.ulChannel;
+                szDeviceID = device_info.szDeviceID;
+               
             }
             return IsLogin;
         }
@@ -171,6 +177,33 @@ namespace CSDNSY
             mlPort = -1;
             HZ_PLAY.PLAY_Stop(port);
             HZ_PLAY.PLAY_ReleasePort(port);
+        }
+        /// <summary>
+        /// 是否修改成功
+        /// </summary>
+        bool IsSetCofig = false;
+        /// <summary>
+        /// 修改配置
+        /// </summary>
+        /// <returns></returns>
+        public bool SetConfig(string _ip,int _port,string _userName,string _password)
+        {
+           
+
+            GetConfig();
+           return IsSetCofig;
+        }
+        public IntPtr video_info;
+        /// <summary>
+        /// 获取视频参数
+        /// </summary>
+        /// <returns></returns>
+        public bool GetConfig()
+        {
+            video_info = IntPtr.Zero; 
+            IsSetCofig= IDM_NETSDK.IDM_DEV_GetConfig(mUserID, 0x00000402, (uint)mChannel, ref video_info, (uint)2000) == IDM_NETSDK.IDM_SUCCESS;
+           
+            return IsSetCofig;
         }
     }
 

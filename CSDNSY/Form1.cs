@@ -99,26 +99,27 @@ namespace CSDNSY
             }
             //用户登录  网络相机IP地址 端口号(默认9000) 登录名  密码
            // if (!mCameraControl.Login("115.236.153.177", 53672, "admin", "lwny1234"))
-          if (!mCameraControl.Login("192.168.1.4", 9000, "admin", "lwny1234"))
+         if (!mCameraControl.Login("192.168.1.4", 9000, "admin", "lwny1234"))
            // if (!mCameraControl.Login("192.168.2.19", 9000, "admin", "lwny1234"))
             {
                 MessageBox.Show("用户登录失败");
                 return;
             }
+            
+           bool q= mCameraControl.SetConfig("192.168.1.4", 9000, "admin", "lwny1234");
+            ////设置解码回调
+            //mCameraControl.mDecCBFunc = DecodeCallBack;
 
-            //设置解码回调
-            mCameraControl.mDecCBFunc = DecodeCallBack;
-           
 
-            // 启动转换并显示的线程
-            displayThread = new Thread(DisplayFrames);
-            displayThread.Start();
+            //// 启动转换并显示的线程
+            //displayThread = new Thread(DisplayFrames);
+            //displayThread.Start();
 
-            //获取监控数据
-            if (!mCameraControl.OpenPlay())
-            {
-                return;
-            }
+            ////获取监控数据
+            //if (!mCameraControl.OpenPlay())
+            //{
+            //    return;
+            //}
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

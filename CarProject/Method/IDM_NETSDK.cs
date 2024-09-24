@@ -541,17 +541,7 @@ public struct IDM_DEV_MANUALSNAP_S
     /// <returns></returns>
     [DllImport(@"idm_netsdk.dll")]
     public static extern int IDM_DEV_Cleanup();
-    /// <summary>
-    /// 获取设备配置
-    /// </summary>
-    /// <returns></returns>
-    [DllImport(@"idm_netsdk.dll")]
-    public static extern int IDM_DEV_GetConfig(long lUserID,
-  ulong ulCommand,
-  ulong ulChannel,
-  IDM_DEV_IPPARACFG_S  pBuffer,
-  ulong ulBufferSize
-);
+  
     #endregion
 
 } 
