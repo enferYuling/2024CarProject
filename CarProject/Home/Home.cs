@@ -80,7 +80,7 @@ namespace CarProject.Home
         private void Home_Load(object sender, EventArgs e)
         {
            // Serve();
-           // InitializeCounters();
+             InitializeCounters();
             homemethod = new HomeMethod(db);
            IPAddress = homemethod.GetLocalIPAddress();//获取IP地址
 
@@ -622,12 +622,12 @@ namespace CarProject.Home
             dateTime_lab.Text = DateTime.Now.ToString("yyyy年MM月dd日 HH点mm分ss秒");
             try
             {
-               // double bytesSent = bytesSentCounter.RawValue / 1048576; // Convert to MB/s
-               // double bytesReceived = bytesReceivedCounter.RawValue / 1048576; // Convert to MB/s
-               // double totalSpeed = bytesSent + bytesReceived;
-               // labelSpeed.Text = $"{totalSpeed:F2} MB/s";
-               // WLSpeed = totalSpeed;
-               //IO();
+                double bytesSent = bytesSentCounter.RawValue / 1048576; // Convert to MB/s
+                double bytesReceived = bytesReceivedCounter.RawValue / 1048576; // Convert to MB/s
+                double totalSpeed = bytesSent + bytesReceived;
+                labelSpeed.Text = $"{totalSpeed:F2} MB/s";
+                WLSpeed = totalSpeed;
+                //IO();
             }
             catch (Exception ex) 
             {

@@ -227,7 +227,7 @@ using ZedGraph;
             public byte ucThirdStreamEnable;
             public byte ucBncOutputEnable;
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = 10)]
-            public byte[] aucRes;
+            public byte[] ucRes;
         }
 
 

@@ -191,7 +191,25 @@ namespace CSDNSY
            
 
             GetConfig();
-           return IsSetCofig;
+           
+            IDM_DEV_VIDEO_ENCODE_PARAM_S info=new IDM_DEV_VIDEO_ENCODE_PARAM_S();
+            info.ucStreamType = 0;
+            info.ucVideoType = 1;
+            info.ucEcodeType = 2;
+            info.ucEncodeLevel = 1;
+            info.ucSmartEncode = 0;
+            info.ucQuality = 1;
+            info.ucBitrateType = 1;
+            info.ucSmoothing = 25;
+            info.usIFrameInterval = 100;
+            info.usResolution = 9;
+            info.usFrameRate = 16;
+            info.usBitrate = 2048;
+            info.ucRes = new byte[10];
+            IntPtr intPtr=IntPtr.Zero;
+            Marshal.StructureToPtr(info, intPtr, false);
+            IsSetCofig = IDM_NETSDK.IDM_DEV_SetConfig(mUserID, 0x00000402, (uint)mChannel, video_info, (uint)2000) == IDM_NETSDK.IDM_SUCCESS;
+            return IsSetCofig;
         }
         public IntPtr video_info;
         /// <summary>

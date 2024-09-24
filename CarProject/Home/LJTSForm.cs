@@ -177,7 +177,7 @@ namespace CarProject.Home
             //}
             //else
             //{
-            //    wltimer.Start();
+               wltimer.Start();
             //    ucPanelTitle1.Visible = false;
             //    if (wlSpeed > 20)
             //    {
@@ -1094,9 +1094,10 @@ namespace CarProject.Home
             }
         }
         //获取网速
-        private void DownloadSpee(double MB)
+        private void DownloadSpee()
         {
-            const string downloadUrl = "file:///E://项目//2024CarProject//CarProject//img//206搜索.png";
+           //const string downloadUrl = "http://8.137.119.17:82/uploads/map.jpeg";
+             const string downloadUrl = @"file:///E://项目//2024CarProject//CarProject//img//map.jpeg";
             WebClient client = new WebClient();
 
             Stopwatch stopwatch = new Stopwatch();
@@ -1106,7 +1107,7 @@ namespace CarProject.Home
 
             try
             {
-                client.DownloadFile(downloadUrl, "tempFile");
+                client.DownloadFile(downloadUrl, @"E:\\项目\\2024CarProject\\CarProject\\ProjectFile\\map.jpeg");
             }
             catch (Exception ex)
             {
@@ -1115,10 +1116,20 @@ namespace CarProject.Home
             }
 
             stopwatch.Stop();
+            // 使用FileInfo类获取文件信息
+            FileInfo fileInfo = new FileInfo(@"E:\\项目\\2024CarProject\\CarProject\\ProjectFile\\map.jpeg");
 
-            double elapsedSeconds = stopwatch.Elapsed.TotalSeconds;
-            double fileSizeInMB = MB;  // 假设下载的文件大小为 nMB
-            double downloadSpeedMbps = fileSizeInMB / elapsedSeconds;//单位为MB
+            // 获取文件大小（字节数）
+            long fileSizeInBytes = fileInfo.Length;
+            decimal QUEY = 1024 * 1024;
+            decimal fileSizeInMB = fileSizeInBytes / QUEY;//字节转为MB
+            if (fileSizeInBytes > 0&&fileSizeInMB==0)
+            {
+                fileSizeInMB = 0.1M;
+            }
+            decimal elapsedSeconds = stopwatch.Elapsed.TotalSeconds.ToDecimal();
+            //double fileSizeInMB = MB;  // 假设下载的文件大小为 nMB
+            decimal downloadSpeedMbps = fileSizeInMB / elapsedSeconds;//单位为MB
 
             if (downloadSpeedMbps > 20)
             {
@@ -1204,7 +1215,7 @@ namespace CarProject.Home
             wlSpeed = query1;
             //Image screenshot = CaptureScreen();
             //zsxt_img.Image = screenshot;
-          //  DownloadSpee(wlSpeed);
+             DownloadSpee();
         }
        
         private Point mouseDownPoint = Point.Empty;
