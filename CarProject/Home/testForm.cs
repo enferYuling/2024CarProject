@@ -842,9 +842,9 @@ namespace CarProject.Home
             //DbRowAngle = rR.Next(-180, 180);
             //DbYawAngle = yR.Next(-45, 45);
             //Hori_Disp(DbPitchAngle, DbRowAngle);
-            
+
             //Hori_Line();
-             
+            DownloadSpee();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -968,31 +968,32 @@ namespace CarProject.Home
 
             //appContainer1.Start();
 
-            //  EXE();
+             EXE();
+           
             DownloadSpee();
+            timer1.Start();
         }
 
         private void appContainer1_Resize(object sender, EventArgs e)
         {
 
         }
-        private readonly Socket _socket;
-        private readonly byte[] _buffer = new byte[1024 * 1024]; // 1MB缓冲区
+       
         //获取网速
         private void DownloadSpee()
         {
-            var network = NetworkInfo.TryGetRealNetworkInfo();
+            var network = NetworkInfo.TryGetRealNetworkInfo("");
             var oldRate = network.GetIpv4Speed();
-            //while (true)
-            //{
-                Thread.Sleep(1000);
-                var newRate = network.GetIpv4Speed();
-                var speed = NetworkInfo.GetSpeed(oldRate, newRate);
-                oldRate = newRate;
-               
-                label1.Text=$"上传：{speed.Sent.Size} {speed.Sent.SizeType}/S    下载：{speed.Received.Size} {speed.Received.SizeType}/S";
-           // }
- 
+
+            Thread.Sleep(1000);
+            var newRate = network.GetIpv4Speed();
+            var speed = NetworkInfo.GetSpeed(oldRate, newRate);
+            oldRate = newRate;
+
+            label1.Text = $"上传：{speed.Sent.Size} {speed.Sent.SizeType}/S    下载：{speed.Received.Size} {speed.Received.SizeType}/S";
+
         }
+
+
     }
 }

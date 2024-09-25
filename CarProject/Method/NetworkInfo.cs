@@ -180,10 +180,19 @@ namespace CarProject.Method
         /// 获取当前真实 IP
         /// </summary>
         /// <returns></returns>
-        public static IPAddress TryGetRealIpv4()
+        public static IPAddress TryGetRealIpv4(string ip)
         {
             var addrs = GetIPAddresses();
-            var ipv4 = addrs.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+            IPAddress ipv4;
+            if (!string.IsNullOrEmpty(ip))
+            {
+                ipv4 =IPAddress.Parse(ip);
+            }
+            else
+            {
+                ipv4 = addrs.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+            }
+              
             return ipv4;
         }
 
@@ -191,9 +200,18 @@ namespace CarProject.Method
         /// 获取真实网卡
         /// </summary>
         /// <returns></returns>
-        public static NetworkInfo TryGetRealNetworkInfo()
+        public static NetworkInfo TryGetRealNetworkInfo(string ip)
         {
-            var realIp = TryGetRealIpv4();
+            IPAddress realIp;
+            if(!string.IsNullOrEmpty(ip))
+            {
+                realIp = TryGetRealIpv4(ip);
+            }
+            else
+            {
+                realIp = TryGetRealIpv4(null);
+            }
+           
             if (realIp == null)
             {
                 return default;

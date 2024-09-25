@@ -139,7 +139,7 @@ BOOL CLivePlayerDlg::OnInitDialog()
 	{
 		//const char url_header[4][200] = {"rtsp://admin:lwny1234@115.236.153.177:53672/h264/ch1/main/av_stream", "rtmp://", "http://", "file://"};
 		//const char url_header[1][200] = { "rtsp://admin:lwny1234@115.236.153.177:53672/h264/ch1/main/av_stream"};
-		const char url_header[1][200] = { "rtsp://admin:lwny1234@115.236.153.177:35070"};//修改地址
+		const char url_header[1][200] = { "rtsp://admin:lwny1234@192.168.2.19:554"};//修改地址
 		int idx = 0;
 		for (int i=0; i<_SURV_MAX_WINDOW_NUM; i++)
 		{

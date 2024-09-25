@@ -106,7 +106,7 @@ namespace CarProject.Home
             this.appContainer1.AppProcess = null;
             this.appContainer1.Location = new System.Drawing.Point(0, 0);
             this.appContainer1.Name = "appContainer1";
-            this.appContainer1.Size = new System.Drawing.Size(52, 73);
+            this.appContainer1.Size = new System.Drawing.Size(404, 314);
             this.appContainer1.TabIndex = 19;
             this.appContainer1.Resize += new System.EventHandler(this.appContainer1_Resize);
             // 
@@ -114,24 +114,24 @@ namespace CarProject.Home
             // 
             this.appContainer2.AppFilename = "";
             this.appContainer2.AppProcess = null;
-            this.appContainer2.Location = new System.Drawing.Point(522, 0);
+            this.appContainer2.Location = new System.Drawing.Point(547, 81);
             this.appContainer2.Name = "appContainer2";
-            this.appContainer2.Size = new System.Drawing.Size(72, 57);
+            this.appContainer2.Size = new System.Drawing.Size(395, 248);
             this.appContainer2.TabIndex = 20;
             // 
             // appContainer3
             // 
             this.appContainer3.AppFilename = "";
             this.appContainer3.AppProcess = null;
-            this.appContainer3.Location = new System.Drawing.Point(187, 106);
+            this.appContainer3.Location = new System.Drawing.Point(83, 402);
             this.appContainer3.Name = "appContainer3";
-            this.appContainer3.Size = new System.Drawing.Size(96, 81);
+            this.appContainer3.Size = new System.Drawing.Size(603, 263);
             this.appContainer3.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(420, 248);
+            this.label1.Location = new System.Drawing.Point(437, 356);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 22;
