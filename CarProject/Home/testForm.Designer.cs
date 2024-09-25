@@ -114,9 +114,9 @@ namespace CarProject.Home
             // 
             this.appContainer2.AppFilename = "";
             this.appContainer2.AppProcess = null;
-            this.appContainer2.Location = new System.Drawing.Point(547, 81);
+            this.appContainer2.Location = new System.Drawing.Point(547, 49);
             this.appContainer2.Name = "appContainer2";
-            this.appContainer2.Size = new System.Drawing.Size(395, 248);
+            this.appContainer2.Size = new System.Drawing.Size(395, 280);
             this.appContainer2.TabIndex = 20;
             // 
             // appContainer3
