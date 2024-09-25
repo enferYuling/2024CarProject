@@ -42,6 +42,7 @@ namespace CarProject.Home
             this.appContainer1 = new SmileWei.EmbeddedApp.AppContainer(this.components);
             this.appContainer2 = new SmileWei.EmbeddedApp.AppContainer(this.components);
             this.appContainer3 = new SmileWei.EmbeddedApp.AppContainer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.SuspendLayout();
@@ -105,7 +106,7 @@ namespace CarProject.Home
             this.appContainer1.AppProcess = null;
             this.appContainer1.Location = new System.Drawing.Point(0, 0);
             this.appContainer1.Name = "appContainer1";
-            this.appContainer1.Size = new System.Drawing.Size(516, 344);
+            this.appContainer1.Size = new System.Drawing.Size(52, 73);
             this.appContainer1.TabIndex = 19;
             this.appContainer1.Resize += new System.EventHandler(this.appContainer1_Resize);
             // 
@@ -115,23 +116,33 @@ namespace CarProject.Home
             this.appContainer2.AppProcess = null;
             this.appContainer2.Location = new System.Drawing.Point(522, 0);
             this.appContainer2.Name = "appContainer2";
-            this.appContainer2.Size = new System.Drawing.Size(516, 344);
+            this.appContainer2.Size = new System.Drawing.Size(72, 57);
             this.appContainer2.TabIndex = 20;
             // 
             // appContainer3
             // 
             this.appContainer3.AppFilename = "";
             this.appContainer3.AppProcess = null;
-            this.appContainer3.Location = new System.Drawing.Point(12, 358);
+            this.appContainer3.Location = new System.Drawing.Point(187, 106);
             this.appContainer3.Name = "appContainer3";
-            this.appContainer3.Size = new System.Drawing.Size(516, 344);
+            this.appContainer3.Size = new System.Drawing.Size(96, 81);
             this.appContainer3.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(420, 248);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "label1";
             // 
             // testForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1378, 714);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.appContainer3);
             this.Controls.Add(this.appContainer2);
             this.Controls.Add(this.appContainer1);
@@ -145,6 +156,7 @@ namespace CarProject.Home
             ((System.ComponentModel.ISupportInitialize)(this.videoView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,5 +170,6 @@ namespace CarProject.Home
         private Vlc.DotNet.Forms.VlcControl vlcControl1;
         private SmileWei.EmbeddedApp.AppContainer appContainer2;
         private SmileWei.EmbeddedApp.AppContainer appContainer3;
+        private System.Windows.Forms.Label label1;
     }
 }

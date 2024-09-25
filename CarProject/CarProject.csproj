@@ -367,7 +367,11 @@
     <Compile Include="Method\LoginMethod.cs" />
     <Compile Include="Method\NativeMethods.cs" />
     <Compile Include="Method\NetworkCommunication1.cs" />
+    <Compile Include="Method\NetworkInfo.cs" />
+    <Compile Include="Method\Rate.cs" />
+    <Compile Include="Method\SizeInfo.cs" />
     <Compile Include="Method\TestMethod.cs" />
+    <Compile Include="Method\UnitType.cs" />
     <Compile Include="Method\User.cs" />
     <Compile Include="Method\YCCLGLDMethod.cs" />
     <Compile Include="Models\Base_cofig.cs" />

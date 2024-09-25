@@ -49,6 +49,7 @@ using LibVLCSharp.WinForms;
 using AForge.Video.DirectShow;
 using AForge.Video;
 using System.Net.NetworkInformation;
+using System.Net.Sockets;
 
 
 
@@ -968,16 +969,30 @@ namespace CarProject.Home
             //appContainer1.Start();
 
             //  EXE();
-          //  NetWork();
+            DownloadSpee();
         }
 
         private void appContainer1_Resize(object sender, EventArgs e)
         {
 
-        } 
-        public void NetWork()
+        }
+        private readonly Socket _socket;
+        private readonly byte[] _buffer = new byte[1024 * 1024]; // 1MB缓冲区
+        //获取网速
+        private void DownloadSpee()
         {
-             
+            var network = NetworkInfo.TryGetRealNetworkInfo();
+            var oldRate = network.GetIpv4Speed();
+            //while (true)
+            //{
+                Thread.Sleep(1000);
+                var newRate = network.GetIpv4Speed();
+                var speed = NetworkInfo.GetSpeed(oldRate, newRate);
+                oldRate = newRate;
+               
+                label1.Text=$"上传：{speed.Sent.Size} {speed.Sent.SizeType}/S    下载：{speed.Received.Size} {speed.Received.SizeType}/S";
+           // }
+ 
         }
     }
 }
