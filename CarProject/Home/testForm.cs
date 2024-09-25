@@ -968,7 +968,7 @@ namespace CarProject.Home
 
             //appContainer1.Start();
 
-           //  EXE();
+            EXE();
            
             DownloadSpee();
             timer1.Start();
